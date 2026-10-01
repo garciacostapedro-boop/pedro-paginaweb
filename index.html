@@ -76,20 +76,20 @@
     </main>
 
     <script>
-        // Seleciona todos os botões da página
+        
         const botoes = document.querySelectorAll("button");
 
-        // Adiciona um ouvinte de evento para cada botão
+        
         botoes.forEach((botao) => {
             botao.addEventListener("click", botaoClicado);
         });
 
         function botaoClicado(event) {
-            // Pega exatamente o botão que foi clicado
+            
             const botaoAtual = event.currentTarget;
             console.log("Fui clicado!");
             
-            // Localiza a tag <span> dentro do botão clicado e incrementa o valor
+            
             let contador = botaoAtual.querySelector("span");
             contador.textContent = parseInt(contador.textContent) + 1;
         }
