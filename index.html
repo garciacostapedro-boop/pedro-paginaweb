@@ -75,7 +75,7 @@
             background-color: #0370b0;
         }
 
-        /* Classe visual para destacar botão ativo */
+        
         button.ativo {
             background-color: #024a75;
         }
@@ -95,7 +95,7 @@
                 alt="Logotipo conceitual de tecnologia e educacao: um livro aberto de onde emerge um cérebro digital brilhante, cercado por ícones de Wi-Fi, circuitos e lâmpada de ideia. Cores em tons de azul e branco.">
             <div>
                 <h2>Meu primeiro post</h2>
-                <p class="artigo-autor">Por: Marcelo Paludetto</p>
+                <p class="artigo-autor">Por: Pedro Henrique</p>
                 <p>Boas-vindas ao meu novo blog! Aqui vou compartilhar dicas de programação e curiosidades da área de tecnologia.</p>
                 <div class="acoes">
                     <button>❤️ <span>0</span></button>
@@ -109,7 +109,7 @@
                 alt="Logotipo conceitual de tecnologia e educacao: um livro aberto de onde emerge um cérebro digital brilhante, cercado por ícones de Wi-Fi, circuitos e lâmpada de ideia. Cores em tons de azul e branco.">
             <div>
                 <h2>Meu segundo post</h2>
-                <p class="artigo-autor">Por: Marcelo Paludetto</p>
+                <p class="artigo-autor">Por: Pedro Henrique</p>
                 <p>Boas-vindas ao meu novo blog! Aqui vou compartilhar dicas de programação e curiosidades da área de tecnologia.</p>
                 <div class="acoes">
                     <button>❤️ <span>0</span></button>
@@ -120,29 +120,9 @@
     </main>
 
     <script>
-        // Seleciona todos os botões do blog
+    
         const botoes = document.querySelectorAll("button");
 
-        // Percorre cada botão atribuindo seu próprio estado e evento
+        
         botoes.forEach(function (botao) {
-            let curtiu = false;
-
-            botao.addEventListener("click", function () {
-                let contadorSpan = botao.querySelector("span");
-                let valorAtual = parseInt(contadorSpan.textContent, 10);
-
-                if (!curtiu) {
-                    contadorSpan.textContent = valorAtual + 1;
-                    curtiu = true;
-                    botao.classList.add("ativo"); // Opcional: altera o estilo quando ativado
-                } else {
-                    contadorSpan.textContent = valorAtual - 1;
-                    curtiu = false;
-                    botao.classList.remove("ativo");
-                }
-            });
-        });
-    </script>
-</body>
-
-</html>
+            let curtiu = false
