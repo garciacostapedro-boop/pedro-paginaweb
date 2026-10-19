@@ -3,13 +3,121 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Meu blog tech</title>
+  <title>Meu Blog Tech</title>
   <style>
-    
+    /* Reset básico e tipografia */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f7f6;
+      color: #333;
+      line-height: 1.6;
+      padding: 40px 20px;
+    }
+
+    main {
+      max-width: 800px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+    }
+
+    /* Estilização dos artigos */
     article {
       display: flex;
-      margin-bottom: 20px;
-      gap: 15px; 
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 20px;
+      gap: 20px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    article:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+    }
+
+    article img {
+      width: 180px;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 8px;
+      flex-shrink: 0;
+    }
+
+    .conteudo-post {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    h2 {
+      font-size: 1.4rem;
+      color: #1a202c;
+      margin-bottom: 4px;
+    }
+
+    .artigo-autor {
+      font-size: 0.85rem;
+      color: #0066cc;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    p {
+      color: #4a5568;
+      font-size: 0.95rem;
+      margin-bottom: 15px;
+    }
+
+    /* Botões de Reação */
+    .acoes {
+      display: flex;
+      gap: 10px;
+    }
+
+    button {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background-color: #edf2f7;
+      border: 1px solid #e2e8f0;
+      padding: 8px 14px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-weight: bold;
+      color: #4a5568;
+      transition: all 0.2s ease;
+      user-select: none;
+    }
+
+    button:hover {
+      background-color: #e2e8f0;
+    }
+
+    /* Classe ativada via JavaScript ao curtir */
+    button.curtido {
+      background-color: #ebf8ff;
+      border-color: #3182ce;
+      color: #2b6cb0;
+    }
+
+    @media (max-width: 600px) {
+      article {
+        flex-direction: column;
+      }
+      article img {
+        width: 100%;
+        height: 180px;
+      }
     }
   </style>
 </head>
@@ -17,24 +125,32 @@
 
   <main>
     <article>
-      <img src="imagem-blog.png" alt="Logotipo conceitual de tecnologia e educacao: um livro aberto de onde emerge um cérebro digital brilhante, cercado por ícones de Wi-Fi, circuitos e lâmpada de ideia. Cores em tons de azul e branco.">
-      <div>
-        <h2>Meu primeiro post</h2>
-        <p class="artigo-autor">Por: Marcelo Paludetto</p>
-        <p>Boas-vindas ao meu novo blog! Aqui vou compartilhar dicas de programação e curiosidades da área de tecnologia.</p>
-        <button>❤️ <span>0</span></button>
-        <button>👍 <span>0</span></button>
+      <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=400&q=80" alt="Placa de circuito com luzes e tecnologia de ponta">
+      <div class="conteudo-post">
+        <div>
+          <h2>Meu primeiro post</h2>
+          <p class="artigo-autor">Por: Marcelo Paludetto</p>
+          <p>Boas-vindas ao meu novo blog! Aqui vou compartilhar dicas de programação e curiosidades da área de tecnologia.</p>
+        </div>
+        <div class="acoes">
+          <button type="button">❤️ <span>0</span></button>
+          <button type="button">👍 <span>0</span></button>
+        </div>
       </div>
     </article>
 
     <article>
-      <img src="imagem-blog.png" alt="Logotipo conceitual de tecnologia e educacao: um livro aberto de onde emerge um cérebro digital brilhante, cercado por ícones de Wi-Fi, circuitos e lâmpada de ideia. Cores em tons de azul e branco.">
-      <div>
-        <h2>Meu segundo post</h2>
-        <p class="artigo-autor">Por: Marcelo Paludetto</p>
-        <p>Boas-vindas ao meu novo blog! Aqui vou compartilhar dicas de programação e curiosidades da área de tecnologia.</p>
-        <button>❤️ <span>0</span></button>
-        <button>👍 <span>0</span></button>
+      <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=400&q=80" alt="Código binário na tela do computador em tom esverdeado">
+      <div class="conteudo-post">
+        <div>
+          <h2>Meu segundo post</h2>
+          <p class="artigo-autor">Por: Marcelo Paludetto</p>
+          <p>Boas-vindas ao meu novo blog! Aqui vou compartilhar dicas de programação e curiosidades da área de tecnologia.</p>
+        </div>
+        <div class="acoes">
+          <button type="button">❤️ <span>0</span></button>
+          <button type="button">👍 <span>0</span></button>
+        </div>
       </div>
     </article>
   </main>
@@ -46,16 +162,17 @@
       let curtiu = false;
 
       botao.addEventListener("click", function () {
-        console.log("fui clicado");
         let texto = botao.querySelector("span");
         let quantidade = Number(texto.textContent);
 
         if (!curtiu) {
           texto.textContent = quantidade + 1;
           curtiu = true;
+          botao.classList.add("curtido");
         } else {
           texto.textContent = quantidade - 1;
           curtiu = false;
+          botao.classList.remove("curtido");
         }
       });
     });
